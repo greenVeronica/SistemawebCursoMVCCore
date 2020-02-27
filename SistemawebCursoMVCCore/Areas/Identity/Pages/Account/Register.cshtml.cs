@@ -39,8 +39,8 @@ namespace SistemawebCursoMVCCore.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
-            [EmailAddress]
+            [Required(ErrorMessage="es obligatorio el email")]
+            [EmailAddress(ErrorMessage = "es email es invalido")]
             [Display(Name = "Email")]
             public string Email { get; set; }
 
